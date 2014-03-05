@@ -7,9 +7,9 @@ public class TowerGunController : MonoBehaviour {
     public Rigidbody2D rocket;
     public float speed;                     // Speed of the rocket
     public GameObject target;               // Target the rocket will fly to
-    // public ArrayList;
     public GameObject[] enemyArray;         // All enemy exist on map
     public float fireRate;
+	public float effectRadius;				// Tower effect radius
 
 	// Use this for initialization
 	void Start () {
@@ -21,21 +21,12 @@ public class TowerGunController : MonoBehaviour {
 	void Update () 
     {
         enemyArray = GameObject.FindGameObjectsWithTag("Enemy");
-
-        /*
-	    if (Input.GetButtonDown("Fire1"))
-        {
-
-
-        }
-        **/
-
 	}
 
     void Fire()
     {
         AimTarget();
-        if (target != null)
+        if (target != null && Distance(gameObject, target) <= effectRadius)
         {
             Rigidbody2D rocketInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
             rocketInstance.GetComponent<RocketController>().target = this.target;

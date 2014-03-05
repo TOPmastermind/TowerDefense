@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TowerGunController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\TowerController.cs" Line="9" Column="32" />
+      <File FileName="Assets\Scripts\DragTower.cs" Line="15" Column="5" />
+      <File FileName="Assets\Scripts\HealthDisplay.cs" Line="17" Column="2" />
+      <File FileName="Assets\Scripts\GuiTextureControl.cs" Line="46" Column="16" />
+      <File FileName="Assets\Scripts\TowerGunController.cs" Line="22" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
