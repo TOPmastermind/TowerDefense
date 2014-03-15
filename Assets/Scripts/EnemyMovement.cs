@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour {
 	public string moveDirection;					// right, left, up, down
     public int health = 3;
 
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -42,23 +43,27 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		if (moveDirection == "right") 
 		{
-			transform.position += new Vector3(runSpeed, 0, 0);
-			_animator.Play( Animator.StringToHash( "Run up" ));
+			// transform.position += new Vector3(runSpeed, 0, 0);
+			rigidbody2D.velocity = new Vector2(runSpeed, 0);
+			// _animator.Play( Animator.StringToHash( "Run up" ));
 		}
 		else if (moveDirection == "left") 
 		{
-			transform.position -= new Vector3(runSpeed, 0, 0);
-			_animator.Play( Animator.StringToHash( "Run up" ));
+			// transform.position -= new Vector3(runSpeed, 0, 0);
+			rigidbody2D.velocity = new Vector2(-runSpeed, 0);
+			// _animator.Play( Animator.StringToHash( "Run up" ));
 		}
 		else if (moveDirection == "up") 
 		{
-			transform.position += new Vector3(0, runSpeed, 0);
-			_animator.Play( Animator.StringToHash( "Run up" ));
+			// transform.position += new Vector3(0, runSpeed, 0);
+			rigidbody2D.velocity = new Vector2(0, runSpeed);
+			// _animator.Play( Animator.StringToHash( "Run up" ));
 		}
 		else
 		{
-			transform.position -= new Vector3(0, runSpeed, 0);
-			_animator.Play( Animator.StringToHash( "Run up" ));
+			// transform.position -= new Vector3(0, runSpeed, 0);
+			rigidbody2D.velocity = new Vector2(0, -runSpeed);
+			// _animator.Play( Animator.StringToHash( "Run up" ));
 		}
 	}
 }

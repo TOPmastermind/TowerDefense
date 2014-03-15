@@ -5,6 +5,7 @@ public class DragTower : MonoBehaviour {
     
     // public SpringJoint2D spring;
     public bool canDrag = false;
+	public bool isDragging = false;
     public Vector3 screenPoint;
     
 
@@ -22,6 +23,7 @@ public class DragTower : MonoBehaviour {
     
     void OnMouseDrag()     
     {
+		isDragging = true;
         Vector3 currentScreenPoint = new Vector3(Input.mousePosition.x,
                                                  Input.mousePosition.y,
                                                  screenPoint.z);
@@ -32,7 +34,7 @@ public class DragTower : MonoBehaviour {
     
     void OnMouseUp()     
     {
-
+		isDragging = false;
     }
     
 }
